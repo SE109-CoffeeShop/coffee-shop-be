@@ -1,5 +1,13 @@
-## Installation
+# Laravel React Example Full Stack Application
+Example Application build with Laravel and React
 
+> The repo was created while I was working on the following [YouTube tutorial](https://youtu.be/qJq9ZMB2Was)
+
+## Demo
+https://laravel-react.com
+
+
+## Installation 
 Make sure you have environment setup properly. You will need PHP8.1, composer and Node.js.
 
 1. Download the project (or clone using GIT)
@@ -14,25 +22,27 @@ Make sure you have environment setup properly. You will need PHP8.1, composer an
 9. Run `npm install`
 10. Run `npm run dev` to start vite server for React
 
-## TODO
 
+
+
+##TODO
 1. Folder react is used to test API, will be deleted in the final.
 2. Migrate database
     - User: ID, username, email, password, name, role
     - Product: ID, name, unit_price
     - Customer: ID, name, phone_number
-    - Voucher: ID, type, amount, start_date, end_date, quantity
-    - Invoice: ID, user_id, customer_id, voucher_id (nullable), price, discount_price, final_price, note (nullable)
+    - Voucher: ID, voucher_code, type, amount, start_date, end_date, quantity
+    - Invoice: ID, user_id, customer_id, voucher_id (nullable), price, discount_price, final_price, note (nullable), date
     - Invoice_detail: invoice_id, product_id, quantity
-    -
+    - 
 3. API
-   - Staff
+   + Staff
        - List Products: [GET] /staff/products
        - Checkout Invoice: [POST] /staff/invoices
        - Verify Voucher: [POST] /staff/verify-voucher
        - List Invoice: [GET] /staff/invoices (pending invoices which has not been served)
        - Add Member: [POST] /staff/members
-   - Admin
+   + Admin
        - List, Add, Update, Delete Products: [GET, POST, PATCH, DELETE] /admin/products (Quản lý products)
        - List members: [GET] /admin/members
        - List, Add, Update, Delete Vouchers: [GET, POST, PATCH, DELETE] /admin/vouchers (Quản lý vouchers)
