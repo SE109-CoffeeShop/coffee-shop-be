@@ -30,15 +30,6 @@ class WrapUp
         $forms = DB::table('request_form')->where('sender_id', $employeeId)->get()->toArray();
 
         $data = [];
-        foreach ($forms as $form) {
-            $data[] = [
-                'id' => $form->id,
-                'reason' => $form->reason,
-                'start_date' => date('d/m/Y', strtotime($form->start_date)),
-                'end_date' => date('d/m/Y', strtotime($form->end_date)),
-                'status' => $form->status,
-            ];
-        }
 
         return response(json_encode($data));
     }
