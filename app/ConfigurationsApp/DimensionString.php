@@ -52,15 +52,9 @@ class DimensionString
      * @param \App\Models\User                     $user
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateUserRequest $request, User $user)
+    public function update()
     {
-        $data = $request->validated();
-        if (isset($data['password'])) {
-            $data['password'] = bcrypt($data['password']);
-        }
-        $user->update($data);
-
-        return new UserResource($user);
+        return null;
     }
 
     /**
