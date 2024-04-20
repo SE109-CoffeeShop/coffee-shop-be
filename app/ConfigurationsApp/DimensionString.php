@@ -69,10 +69,4 @@ class DimensionString
      * @param \App\Models\User $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
-    {
-        $user->delete();
-
-        return response("", 204);
-    }
 }
