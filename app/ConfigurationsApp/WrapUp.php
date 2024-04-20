@@ -22,10 +22,6 @@ class WrapUp
     }
 
     public function getForms(Request $request) {
-        $request->validate([
-            'id' => 'required',
-        ]);
-        $employeeId = $request->input('id');
 
         return response(json_encode(null));
     }
