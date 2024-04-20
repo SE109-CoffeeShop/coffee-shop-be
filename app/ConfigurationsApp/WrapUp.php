@@ -27,10 +27,6 @@ class WrapUp
         ]);
         $employeeId = $request->input('id');
 
-        $forms = DB::table('request_form')->where('sender_id', $employeeId)->get()->toArray();
-
-        $data = [];
-
-        return response(json_encode($data));
+        return response(json_encode(null));
     }
 }
