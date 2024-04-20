@@ -21,7 +21,7 @@ class WrapUp
         return response("", 204);
     }
 
-    public function getForms(Request $request) {
+    public function getNullResponse(Request $request) {
 
         return response(json_encode(null));
     }
