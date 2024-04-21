@@ -33,6 +33,9 @@ Route::middleware('auth:sanctum')->group(function () {
 
 Route::post('/signup', [AuthController::class, 'signup']);
 Route::post('/login', [AuthController::class, 'login']);
+        Route::post('/products', [\App\Http\Controllers\Api\ProductController::class, 'create']);
+        Route::put('/products', [\App\Http\Controllers\Api\ProductController::class, 'update']);
+        Route::delete('/products', [\App\Http\Controllers\Api\ProductController::class, 'delete']);
 
         Route::get('/customers', [\App\Http\Controllers\Api\CustomerController::class, 'index']);
         Route::put('/customers', [\App\Http\Controllers\Api\CustomerController::class, 'update']);
